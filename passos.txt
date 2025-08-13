@@ -4,16 +4,18 @@ git config --global user.email anagiovanni66@gmail.com
 dotnet new webapi -o Aplicacao-Financeira.Api
 dotnet new webapi -o Aplicacao-Financeira.Api --use-controllers
 
-cd SoniaStore
+cd Aplicacao-Financeira.Api
 
 nuget.org
-dotnet add package Swashbuckle.AspNetCore --version 9.0.0
+dotnet add package Swashbuckle.AspNetCore --version 9.0.3
 
-dotnet add package Microsoft.EntityFrameworkCore --version 9.0.1
-dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.1
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.1
-dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.1
-dotnet add package MySql.EntityFrameworkCore --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.8
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.8
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.8
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.8
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 9.0.8
+dotnet add package System.IdentityModel.Tokens.Jwt --version 8.13.1
+dotnet add package MySql.EntityFrameworkCore --version 9.0.6
 
 Arquivo .csproj
     <Nullable>disable</Nullable>
