@@ -1,11 +1,11 @@
 using System.Text;
-using Aplicacao-Financeira.Api.Data;
-using Aplicacao-Financeira.Api.Models;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Aplicacao_Financeira.Api.Data;
+using Microsoft.EntityFrameworkCore;
+using Aplicacao_Financeira.Api.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -90,7 +90,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "GAF API",
+        Title = "Financias API",
         Version = "v1",
         Description = "API para gerenciamento de finanças pessoais"
     });
@@ -126,7 +126,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "GAF API V1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Aplicação Financeira API V1");
         c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
     });
 }
