@@ -1,11 +1,42 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Aplicacao_Financeira.Api.Models;
+using Aplicacao_Financeira.Api.Repositories.Interfaces;
 
 namespace Aplicacao_Financeira.Api.Repositories;
 
-public class CategoryRepository
+public class CategoryRepository : ICategoryRepository
 {
+    public Task<IEnumerable<Category>> GetAllByUserIdAsync(string userId)
+    {
+        throw new NotImplementedException();
+    }
 
+    public Task<Category> GetByIdAsync(int id, string userId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Category> GetByNameAsync(string name, string userId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Category> CreateAsync(Category category)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<bool> DeleteAsync(int id, string userId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<bool> HasTransactionAsync(int categoryId, string userId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Category> UpdateAsync(Category category)
+    {
+        throw new NotImplementedException();
+    }
 }
